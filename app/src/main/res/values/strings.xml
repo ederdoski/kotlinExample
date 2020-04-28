@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Random API</string>
+
+
+    <string name="error_api_generic">Generic Error</string>
+    <string name="error_api_generic_2">Generic Error 2</string>
+
+
+</resources>
