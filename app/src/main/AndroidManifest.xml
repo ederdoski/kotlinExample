@@ -24,11 +24,11 @@
 
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
 
         <activity
             android:name=".UserCard"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
 
     </application>
 

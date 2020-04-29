@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -8,15 +9,22 @@
             type="com.adrenastudies.myapplication.model.UserDetail" />
     </data>
 
-    <android.support.constraint.ConstraintLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context ="com.adrenastudies.myapplication.UserCard">
+
+        <include
+                android:id="@+id/header"
+                layout="@layout/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                card_view:layout_constraintTop_toBottomOf="@+id/header"
                 tools:ignore="MissingConstraints">
 
             <android.support.v7.widget.CardView
@@ -123,6 +131,7 @@
                                 android:gravity="center">
 
                             <ImageView
+                                    android:id="@+id/imgADD"
                                     android:layout_width="@dimen/_50sdp"
                                     android:layout_height="@dimen/_50sdp"
                                     card_view:srcCompat="@drawable/vector_add"
@@ -137,6 +146,7 @@
                                 android:gravity="center">
 
                             <ImageView
+                                    android:id="@+id/imgFavorite"
                                     android:layout_width="@dimen/_50sdp"
                                     android:layout_height="@dimen/_50sdp"
                                     card_view:srcCompat="@drawable/vector_favorite"
@@ -151,6 +161,7 @@
                                 android:gravity="center">
 
                             <ImageView
+                                    android:id="@+id/imgDelete"
                                     android:layout_width="@dimen/_50sdp"
                                     android:layout_height="@dimen/_50sdp"
                                     card_view:srcCompat="@drawable/vector_delete"

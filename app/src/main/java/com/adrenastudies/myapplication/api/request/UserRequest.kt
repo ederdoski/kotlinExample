@@ -8,7 +8,11 @@ import com.adrenastudies.myapplication.model.ListUsers
 import com.adrenastudies.myapplication.model.User
 
 class UserRequest {
+
     companion object {
+
+        var quantityLikes:Int = 0
+        var quantityFriends:Int = 0
 
         fun getUser(id:String, userObject: MutableLiveData<User>) {
             ApiRequest.getUser(id, object : ApiCallback() {
@@ -38,6 +42,28 @@ class UserRequest {
             })
         }
 
+        fun getLikes(likes: MutableLiveData<Int>) {
+            likes.value = quantityLikes
+        }
+
+        fun getFriends(friends: MutableLiveData<Int>) {
+            friends.value = quantityFriends
+        }
+
+        fun addFriends(friends: MutableLiveData<Int>) {
+            friends.value = quantityFriends + 1
+            quantityFriends ++
+        }
+
+        fun removeFriend(friends: MutableLiveData<Int>) {
+            friends.value = quantityFriends - 1
+            quantityFriends --
+        }
+
+        fun addLikes(likes: MutableLiveData<Int>) {
+            likes.value = quantityLikes + 1
+            quantityLikes++
+        }
 
     }
 
