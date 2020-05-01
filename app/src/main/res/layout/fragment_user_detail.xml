@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="user"
-            type="com.adrenastudies.myapplication.model.UserDetail" />
+                name="user"
+                type="com.adrenastudies.myapplication.model.UserDetail" />
     </data>
 
     <android.support.constraint.ConstraintLayout

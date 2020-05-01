@@ -1,6 +1,7 @@
 package com.adrenastudies.myapplication.adapters
 
 import android.content.Context
+import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +9,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.navigation.Navigation
 import com.adrenastudies.myapplication.R
-import com.adrenastudies.myapplication.UserCard
 import com.adrenastudies.myapplication.model.ListUsers
 import com.adrenastudies.myapplication.model.UserDetail
 import com.adrenastudies.myapplication.utils.Functions
+
 
 class UserAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -33,9 +35,9 @@ class UserAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         aUsers = listUsers!!
     }
 
-    fun setData(userVH: UserVH, position: Int) {
+    private fun setData(userVH: UserVH, position: Int) {
 
-        val data:UserDetail = aUsers.data[position]
+        val data: UserDetail = aUsers.data[position]
 
         userVH.txtID.text = data.id
         userVH.txtName.text = data.first_name
@@ -44,12 +46,14 @@ class UserAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         Functions.setImg(context, userVH.imgProfile, data.avatar)
 
         userVH.lyUserItem.setOnClickListener {
-            Functions.changeActivity(context, UserCard::class.java, data.id)
+            val bundle = Bundle()
+            bundle.putString("id", data.id)
+            Navigation.findNavController(it).navigate(R.id.action_list_user_to_user_detail, bundle)
         }
 
     }
 
-    fun setComponents(holder:RecyclerView.ViewHolder, position: Int) {
+    private fun setComponents(holder:RecyclerView.ViewHolder, position: Int) {
         val userVH:UserVH = holder as UserVH
         setData(userVH, position)
     }
