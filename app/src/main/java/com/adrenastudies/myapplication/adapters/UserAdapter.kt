@@ -2,7 +2,7 @@ package com.adrenastudies.myapplication.adapters
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,7 +53,7 @@ class UserAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     }
 
-    private fun setComponents(holder:RecyclerView.ViewHolder, position: Int) {
+    private fun setComponents(holder: RecyclerView.ViewHolder, position: Int) {
         val userVH:UserVH = holder as UserVH
         setData(userVH, position)
     }
