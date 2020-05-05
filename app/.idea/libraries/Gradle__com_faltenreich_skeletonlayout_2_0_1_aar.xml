@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.faltenreich:skeletonlayout:2.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/947291ea918cc46c13563d045520d4dc/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/947291ea918cc46c13563d045520d4dc/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.faltenreich/skeletonlayout/2.0.1/ff7367e25fe4e00876ddde759d6fb86905f3c33d/skeletonlayout-2.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

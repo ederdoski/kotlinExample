@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
+import com.faltenreich.skeletonlayout.Skeleton;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -147,6 +148,14 @@ public class Functions {
     }
 
     //  <!-- ............... Utils ................. -->
+
+    public static void showSkeleton(Skeleton skeleton) {
+        skeleton.showSkeleton();
+    }
+
+    public static void hideSkeleton(Skeleton skeleton) {
+        skeleton.showOriginal();
+    }
 
     public static void hideKeyboard(Activity act) {
         InputMethodManager imm = (InputMethodManager) act.getSystemService(Activity.INPUT_METHOD_SERVICE);

@@ -1,6 +1,6 @@
 package com.adrenastudies.myapplication.api.request
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import android.util.Log
 import com.adrenastudies.myapplication.api.ApiRequest
 import com.adrenastudies.myapplication.interfaces.ApiCallback

@@ -1,8 +1,8 @@
 package com.adrenastudies.myapplication.viewmodel
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.adrenastudies.myapplication.api.request.UserRequest
 import com.adrenastudies.myapplication.model.ListUsers
 import com.adrenastudies.myapplication.model.User
